@@ -59,11 +59,11 @@ mysql_secure_installation --set-root-pass RoboShop@1
 
 VALIDATE "Password setup"
 
-# You can check the new password working or not using the following command in MySQL.
+# Validate MySQL is Up and Operational.
 
-#mysql -uroot -pRoboShop@1
+netstat -tulpn | grep 3306 &>> "$LOG_FILE"
 
-#VALIDATE "MySQL Status Validation"
+VALIDATE "MySQL Status Validation"
 
 
 
