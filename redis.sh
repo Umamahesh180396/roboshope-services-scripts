@@ -58,3 +58,9 @@ VALIDATE "Enabling redis service"
 systemctl start redis &>> "$LOG_FILE"
 
 VALIDATE "Starting redis service"
+
+# Validate redis up and running and operational
+
+netstat -tulpn | grep 6379 &>> "$LOG_FILE"
+
+VALIDATE "Redis Up and Operational"
