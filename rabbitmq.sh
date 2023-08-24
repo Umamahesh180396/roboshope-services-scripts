@@ -63,4 +63,10 @@ rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>> "$LOG_FILE"
 
 VALIDATE "Setting up permissions"
 
+# Validate RabbitMQ up and running and operational
+
+netstat -tulpn | grep 5672 &>> "$LOG_FILE"
+
+VALIDATE "RabbitMQ Up and Operational"
+
 
