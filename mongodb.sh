@@ -59,5 +59,11 @@ systemctl restart mongod &>> "$LOG_FILE"
 
 VALIDATE "Restarting mongod service"
 
+# Validate mongodb up and running and operational
+
+netstat -tulpn | grep 27017 &>> "$LOG_FILE"
+
+VALIDATE "Mongodb Up and Operational"
+
 
 
