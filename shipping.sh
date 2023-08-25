@@ -90,7 +90,7 @@ yum install mysql -y &>> "$LOG_FILE"
 
 # Load Schema
 
-mysql -h MYSQL-SERVER-IPADDRESS -uroot -pRoboShop@1 < /app/schema/shipping.sql &>> "$LOG_FILE"
+mysql -h mysql.robomart.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql &>> "$LOG_FILE"
 
 VALIDATE "Load schema"
 
