@@ -57,7 +57,7 @@ VALIDATE "Downloading code"
 
 cd /app
 
-unzip /tmp/payment.zip
+unzip /tmp/payment.zip &>> "$LOG_FILE"
 
 # This python app required dependenies. Lets download
 
