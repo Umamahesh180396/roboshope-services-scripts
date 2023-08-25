@@ -33,7 +33,8 @@ VALIDATE "Installing Python"
 
 # Add application User if not exist
 
-if [[ ! $(id roboshop &>> /dev/null) ]]
+id roboshop &>> /dev/null
+if [[ $? -ne 0 ]]
 then
     useradd roboshop
     VALIDATE "User roboshop created"
