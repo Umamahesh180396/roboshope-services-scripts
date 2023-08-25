@@ -62,7 +62,7 @@ VALIDATE "Code downloading"
 
 cd /app
 
-unzip /tmp/user.zip
+unzip /tmp/user.zip &>> "$LOG_FILE"
 
 VALIDATE "Unzipping code"
 

@@ -50,13 +50,13 @@ fi
 
 # Download the application code to created app directory
 
-curl -L -o /tmp/shipping.zip https://roboshop-builds.s3.amazonaws.com/shipping.zip &>> "$LOG_FILE"
+curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip &>> "$LOG_FILE"
 
 VALIDATE "Code downloading"
 
 cd /app
 
-unzip /tmp/shipping.zip
+unzip /tmp/shipping.zip &>> "$LOG_FILE"
 
 VALIDATE "Unzipping code"
 
