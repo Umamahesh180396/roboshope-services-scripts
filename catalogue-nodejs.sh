@@ -39,7 +39,7 @@ VALIDATE "Installing nodejs"
 
 # Add application User if not exist
 
-if [[ ! $(id roboshop) ]]
+if [[ ! $(id roboshop &>> /dev/null) ]]
 then
     useradd roboshop
     VALIDATE "User roboshop created"
